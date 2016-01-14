@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAPIA Handler", "API Security\SAPIA Handler.csproj", "{855C8616-FFC3-40FC-A107-30C394FFF18B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAPIA Unit Test", "API Security Unit Test\SAPIA Unit Test.csproj", "{42120236-4F05-4A03-80A4-47139F6FFE98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAPIA NET SDK", "NET SDK\SAPIA NET SDK.csproj", "{3D025F4F-0D4F-44FE-AD63-C3837918C531}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{855C8616-FFC3-40FC-A107-30C394FFF18B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{855C8616-FFC3-40FC-A107-30C394FFF18B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{855C8616-FFC3-40FC-A107-30C394FFF18B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{855C8616-FFC3-40FC-A107-30C394FFF18B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42120236-4F05-4A03-80A4-47139F6FFE98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42120236-4F05-4A03-80A4-47139F6FFE98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42120236-4F05-4A03-80A4-47139F6FFE98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42120236-4F05-4A03-80A4-47139F6FFE98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D025F4F-0D4F-44FE-AD63-C3837918C531}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D025F4F-0D4F-44FE-AD63-C3837918C531}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D025F4F-0D4F-44FE-AD63-C3837918C531}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D025F4F-0D4F-44FE-AD63-C3837918C531}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
