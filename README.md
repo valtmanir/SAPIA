@@ -51,4 +51,4 @@ The client side is transparent to any server-side configurations. Include the DL
 * .NET framework 4 and above.
 
 ## License
-This open source project is published under MIT license.
+This open source project is published under [MIT license](https://github.com/valtmanir/SAPIA/blob/master/LICENSE).
