@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAPIA Handler", "API Security\SAPIA Handler.csproj", "{855C8616-FFC3-40FC-A107-30C394FFF18B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAPIA NET Client SDK Unit Test", "API Security Unit Test\SAPIA NET Client SDK Unit Test.csproj", "{42120236-4F05-4A03-80A4-47139F6FFE98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAPIA Unit Test", "API Security Unit Test\SAPIA Unit Test.csproj", "{42120236-4F05-4A03-80A4-47139F6FFE98}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAPIA NET Client SDK", "NET SDK\SAPIA NET Client SDK.csproj", "{3D025F4F-0D4F-44FE-AD63-C3837918C531}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAPIA NET SDK", "NET SDK\SAPIA NET SDK.csproj", "{3D025F4F-0D4F-44FE-AD63-C3837918C531}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAPIA NET Server SDK", "SAPIA Server SDK\SAPIA NET Server SDK.csproj", "{8A12374B-A78C-4750-A728-64DF84398410}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessObject", "DataAccessObject\DataAccessObject.csproj", "{A0F82F35-D932-41A1-8B8F-FD4D34F23909}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoWebApp", "DemoWebApp\DemoWebApp.csproj", "{4BEF383D-8079-4CFB-A834-4A5946AF95C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{855C8616-FFC3-40FC-A107-30C394FFF18B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{855C8616-FFC3-40FC-A107-30C394FFF18B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{855C8616-FFC3-40FC-A107-30C394FFF18B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{855C8616-FFC3-40FC-A107-30C394FFF18B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{42120236-4F05-4A03-80A4-47139F6FFE98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{42120236-4F05-4A03-80A4-47139F6FFE98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42120236-4F05-4A03-80A4-47139F6FFE98}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,6 +27,18 @@ Global
 		{3D025F4F-0D4F-44FE-AD63-C3837918C531}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D025F4F-0D4F-44FE-AD63-C3837918C531}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D025F4F-0D4F-44FE-AD63-C3837918C531}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A12374B-A78C-4750-A728-64DF84398410}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A12374B-A78C-4750-A728-64DF84398410}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A12374B-A78C-4750-A728-64DF84398410}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A12374B-A78C-4750-A728-64DF84398410}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0F82F35-D932-41A1-8B8F-FD4D34F23909}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0F82F35-D932-41A1-8B8F-FD4D34F23909}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0F82F35-D932-41A1-8B8F-FD4D34F23909}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0F82F35-D932-41A1-8B8F-FD4D34F23909}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BEF383D-8079-4CFB-A834-4A5946AF95C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BEF383D-8079-4CFB-A834-4A5946AF95C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BEF383D-8079-4CFB-A834-4A5946AF95C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BEF383D-8079-4CFB-A834-4A5946AF95C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

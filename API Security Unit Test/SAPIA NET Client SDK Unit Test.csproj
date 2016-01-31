@@ -6,9 +6,9 @@
     <ProjectGuid>{42120236-4F05-4A03-80A4-47139F6FFE98}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>API_Security_Unit_Test</RootNamespace>
-    <AssemblyName>API Security Unit Test</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <RootNamespace>SAPIA_NET_Client_SDK_Unit_Test</RootNamespace>
+    <AssemblyName>SAPIA NET Client SDK Unit Test</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -58,13 +58,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NET SDK\SAPIA NET SDK.csproj">
-      <Project>{3d025f4f-0d4f-44fe-ad63-c3837918c531}</Project>
-      <Name>SAPIA NET SDK</Name>
-    </ProjectReference>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
+    <ProjectReference Include="..\NET SDK\SAPIA NET Client SDK.csproj">
+      <Project>{3d025f4f-0d4f-44fe-ad63-c3837918c531}</Project>
+      <Name>SAPIA NET Client SDK</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

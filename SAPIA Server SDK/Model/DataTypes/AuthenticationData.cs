@@ -7,9 +7,9 @@ using System.Security;
 using System.Text;
 using System.Globalization;
 
-namespace SAPIA.Model
+namespace SAPIA_NET_Server_SDK.Model
 {
-    public class AuthenticationData
+    internal class AuthenticationData
     {
         private static readonly int maxPayloadBytes = Properties.Settings.Default.PayloadBytesToAuthenticate;
         private const string AUTHORIZATION_TYPE = "API";

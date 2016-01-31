@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SAPIA.Model;
+using SAPIA_NET_Server_SDK.Model;
 
-namespace SAPIA.Model.Cryptography
+namespace SAPIA_NET_Server_SDK.Model.Cryptography
 {
-    interface IMessageAuthenticationCodeVerifier
+    internal interface IMessageAuthenticationCodeVerifier
     {
         // This method authenticates the message and returns any relevant data according to the business logic
         // of the application, e.g. full identity, roles, claims etc. 

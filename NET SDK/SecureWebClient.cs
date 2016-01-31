@@ -7,7 +7,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NET_SDK
+namespace SAPIA_NET_Client_SDK
 {
     public class SecureWebClient : WebClient
     {

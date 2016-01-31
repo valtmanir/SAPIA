@@ -1,5 +1,5 @@
-﻿using SAPIA.Model;
-using SAPIA.Model.Cryptography;
+﻿using SAPIA_NET_Server_SDK.Model;
+using SAPIA_NET_Server_SDK.Model.Cryptography;
 using System;
 using System.Net;
 using System.Runtime.Caching;
@@ -7,7 +7,7 @@ using System.Security;
 using System.Threading;
 using System.Web;
 
-namespace SAPIA
+namespace SAPIA_NET_Server_SDK
 {
     /// <summary>
     /// Use this handler to authenticate all API requests before it hits that application logic.
@@ -19,7 +19,7 @@ namespace SAPIA
 
         private const string RESPONSE_CACHE_NAME = "ResponseCache";
 
-        public static SuccesfulResponseCache cache = new SuccesfulResponseCache(RESPONSE_CACHE_NAME);
+        internal static SuccesfulResponseCache cache = new SuccesfulResponseCache(RESPONSE_CACHE_NAME);
 
         public IAsyncResult BeginProcessRequest(HttpContext context, AsyncCallback cb, object extraData)
         {

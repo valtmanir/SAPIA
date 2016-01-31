@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace SAPIA.Model.DataAccess
+namespace DataAccessObject
 {
-    interface IDataAccessObject
+    public interface IDataAccessObject
     {
         // This methods retrieved the secret key of the identity based on the shared key.
         string GetSecretKey(string sharedKey);
@@ -14,6 +13,5 @@ namespace SAPIA.Model.DataAccess
         // The method persists the key pair (secret and shared keys) for a given identity.
         // If the key pair succesfully persisted, themethod returns true.
         bool StoreKeyPair(string secretKey, string sharedKey, object additionalIdentityData);
-
     }
 }

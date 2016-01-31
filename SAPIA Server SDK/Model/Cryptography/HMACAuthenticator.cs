@@ -1,4 +1,5 @@
-﻿using SAPIA.Model.DataAccess;
+﻿using DataAccessObject;
+using SAPIA_NET_Server_SDK.Model.Cryptography;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +8,9 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Web;
 
-namespace SAPIA.Model.Cryptography
+namespace SAPIA_NET_Server_SDK.Model.Cryptography
 {
-    public class HMACAuthenticator : IMessageAuthenticationCodeVerifier, IDisposable
+    internal class HMACAuthenticator : IMessageAuthenticationCodeVerifier, IDisposable
     {
         private HMACSHA256 _hmac = new HMACSHA256();
         private static IDataAccessObject _dao = new DemoDAO();

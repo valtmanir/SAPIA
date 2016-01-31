@@ -5,9 +5,9 @@ using System.Linq;
 using System.Runtime.Caching;
 using System.Web;
 
-namespace SAPIA.Model
+namespace SAPIA_NET_Server_SDK.Model
 {
-    public class SuccessfulResponse
+    internal class SuccessfulResponse
     {
 
         public SuccessfulResponse(string SecretKey, object Identity)
@@ -20,7 +20,7 @@ namespace SAPIA.Model
         public object Identity { get; private set; }
     }
 
-    public class SuccesfulResponseCache : MemoryCache
+    internal class SuccesfulResponseCache : MemoryCache
     {
         private CacheItemPolicy HardDefaultCacheItemPolicy = new CacheItemPolicy()
         {

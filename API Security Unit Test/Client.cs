@@ -6,12 +6,13 @@ using System.Net;
 using System.Security.Cryptography;
 using System.Text;
 using System.Globalization;
-using NET_SDK;
 using System.Configuration;
 using System.Xml.Linq;
 using System.Threading;
+using SAPIA_NET_Client_SDK;
 
-namespace API_Security_Unit_Test
+
+namespace SAPIA_NET_Client_SDK_Unit_Test
 {
     [TestClass]
     public class SDKClientShould
@@ -21,14 +22,14 @@ namespace API_Security_Unit_Test
         private const string SHARED_KEY = "MyDemoSharedKeyABC";
 
         [TestMethod]
-        public void performASuccessfulGetRequest()
+        public void PerformASuccessfulGetRequest()
         {
             var webClient = new SecureWebClient(SECRET_KEY, SHARED_KEY, BASE_ADDRESS);
             var dataStream = webClient.OpenRead(BASE_ADDRESS.AbsoluteUri);          
         }
 
         [TestMethod]
-        public void SuccessfulPostRequestWithShortPayload()
+        public void PerformSuccessfulPostRequestWithShortPayload()
         {
             var data = "AnyData";
             var payload = new MemoryStream(Encoding.UTF8.GetBytes(data));
@@ -37,7 +38,7 @@ namespace API_Security_Unit_Test
         }
 
         [TestMethod]
-        public void SuccessfulPostRequestWithLongPayload()
+        public void PerformSuccessfulPostRequestWithLongPayload()
         {
             var data = "AnyData";
             while (data.Length <= SecureWebClient.MaxPayloadBytes)
@@ -48,7 +49,7 @@ namespace API_Security_Unit_Test
         }
 
         [TestMethod]
-        public void TamperedPayload()
+        public void TamperPayloadAndRecieveUnauthorizedResponse()
         {
             var data = "AnyData";
             var tamperedData = String.Format("{0}{1}", data, data);
@@ -66,7 +67,7 @@ namespace API_Security_Unit_Test
         }
 
         [TestMethod]
-        public void TimedOutRequest()
+        public void SendTimedOutRequestAndRecieveUnauthorizedResponse()
         {
             try
             {
@@ -83,7 +84,7 @@ namespace API_Security_Unit_Test
         }
 
         [TestMethod]
-        public void TamperedTimeStamp()
+        public void SendTamperedTimeStampAndRecieveUnauthorizedResponse()
         {
             var data = "AnyData";
             var payload = new MemoryStream(Encoding.UTF8.GetBytes(data));
@@ -114,7 +115,7 @@ namespace API_Security_Unit_Test
         }
 
         [TestMethod]
-        public void TamperedTimeStampFormat()
+        public void SendTamperedTimeStampFormatAndRecieveUnauthorizedResponse()
         {
             var data = "AnyData";
             var payload = new MemoryStream(Encoding.UTF8.GetBytes(data));
@@ -145,7 +146,7 @@ namespace API_Security_Unit_Test
         }
 
         [TestMethod]
-        public void TamperedURI()
+        public void SendTamperedURIAndRecieveUnauthorizedResponse()
         {
             var data = "AnyData";
             var tamperedData = String.Format("{0}{1}", data, data);
@@ -165,7 +166,7 @@ namespace API_Security_Unit_Test
         }
 
         [TestMethod]
-        public void FailureAuthenticationOnMissingAuthorizationHeader()
+        public void RemoveAuthorizationHeaderAndRecieveUnauthorizedResponse()
         {
             var data = "AnyData";
             var tamperedData = String.Format("{0}{1}", data, data);
@@ -184,7 +185,7 @@ namespace API_Security_Unit_Test
         }
 
         [TestMethod]
-        public void FailureAuthenticationOnEmptyAuthorizationValue()
+        public void SendEmptyAuthorizationValueAndRecieveUnauthorizedResponse()
         {
             var data = "AnyData";
             var tamperedData = String.Format("{0}{1}", data, data);
@@ -204,7 +205,7 @@ namespace API_Security_Unit_Test
         }
 
         [TestMethod]
-        public void FailureAuthenticationOnEmptyAuthorizationHeader()
+        public void SendEmptyAuthorizationHeadeAndRecieveUnauthorizedResponser()
         {
             var data = "AnyData";
             var tamperedData = String.Format("{0}{1}", data, data);
@@ -224,7 +225,7 @@ namespace API_Security_Unit_Test
         }
 
         [TestMethod]
-        public void TamperedSharedKey()
+        public void SendTamperedSharedKeyAndRecieveUnauthorizedResponse()
         {
             var data = "AnyData";
             var payload = new MemoryStream(Encoding.UTF8.GetBytes(data));
