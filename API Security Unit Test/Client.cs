@@ -260,9 +260,9 @@ namespace SAPIA_NET_Client_SDK_Unit_Test
 
         private int GetRequestTimeOut()
         {
-            var filePath = String.Format("{0}{1}", Directory.GetCurrentDirectory(), @"\..\..\..\API Security\Web.config");
+            var filePath = String.Format("{0}{1}", Directory.GetCurrentDirectory(), @"\..\..\..\DemoWebApp\bin\app.config");
             var xdoc = XDocument.Load(filePath);
-            var strSettingElement = xdoc.Element("configuration").Element("applicationSettings").Element("API_Security.Properties.Settings").FirstNode.NextNode.ToString();
+            var strSettingElement = xdoc.Element("configuration").Element("applicationSettings").Element("SAPIA_Server_SDK.Properties.Settings").FirstNode.NextNode.ToString();
             var settingElement = XDocument.Load(new MemoryStream(Encoding.UTF8.GetBytes(strSettingElement)));
             return int.Parse(settingElement.Element("setting").Element("value").Value);
         }

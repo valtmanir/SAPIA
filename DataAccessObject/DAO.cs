@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using SAPIA_NET_Server_IDataAccessObject;
 
-namespace DataAccessObject
+namespace SAPIA_NET_Server_DataAccessObject
+
 {
-    public class DemoDAO : IDataAccessObject
+    public class DAO : IDataAccessObject
     {
 
         public string GetSecretKey(string sharedKey)

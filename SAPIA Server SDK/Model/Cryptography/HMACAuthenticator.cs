@@ -1,4 +1,5 @@
-﻿using DataAccessObject;
+﻿using SAPIA_NET_Server_IDataAccessObject;
+using SAPIA_NET_Server_DataAccessObject;
 using SAPIA_NET_Server_SDK.Model.Cryptography;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,7 @@ namespace SAPIA_NET_Server_SDK.Model.Cryptography
     internal class HMACAuthenticator : IMessageAuthenticationCodeVerifier, IDisposable
     {
         private HMACSHA256 _hmac = new HMACSHA256();
-        private static IDataAccessObject _dao = new DemoDAO();
+        private static IDataAccessObject _dao = new DAO();
         private static readonly int maxPayloadBytes = Properties.Settings.Default.PayloadBytesToAuthenticate;
         private static readonly int maxtTimeout = Properties.Settings.Default.MaxTimeout;
         private static readonly bool isTimeoutVerificationEnabled = Properties.Settings.Default.IsTimeoutVerificationEnabled;

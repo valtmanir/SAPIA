@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace DataAccessObject
+namespace SAPIA_NET_Server_IDataAccessObject
 {
     public interface IDataAccessObject
     {
