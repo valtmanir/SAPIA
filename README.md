@@ -1,7 +1,6 @@
 # Secure API Authentication (SAPIA)
 
-The SAPIA project has been established in order to enable a secure and highly performing ***non-interatvie user authentication to APIs***. Although the approach can be leveraged by interactive users as well, there are other various supported authentication protocols in the field that can be examined. 
-
+The SAPIA project has been established in order to enable a secure and highly performing non-interatvie user authentication to APIs. The main types of applicatinos that need this project are IoT applications, software development kits, scheduled batch files or even mobile applications enabling transparent login. Although the approach can be leveraged by fully interactive users as well, there are other various supported authentication protocols in the field that can be examined, e.g. credentials, certificate authentication or access tokens.
 ## Introduction
 The SAPIA project provides a standard .NET based HTTP handler for web and application servers, which provide the first protection gate for all the application endpoints that protected by it. 
 This project consist of both server-side and client-side functionality. The server side performs the authentication and integirty validations, while the client side is provided in a form of SDK for generating the requests to the server.
