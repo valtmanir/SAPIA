@@ -17,7 +17,7 @@ namespace SAPIA_NET_Client_SDK_Unit_Test
     [TestClass]
     public class SDKClientShould
     {
-        private Uri BASE_ADDRESS = new Uri(@"http://127.0.0.1/SAPIA/");
+        private Uri BASE_ADDRESS = new Uri(@"http://127.0.0.1/SAPIA/Hello.asmx/HelloWorld");
         private const string SECRET_KEY = "MyDemoSecretKey123";
         private const string SHARED_KEY = "MyDemoSharedKeyABC";
 
