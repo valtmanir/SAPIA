@@ -15,6 +15,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoWebApp", "DemoWebApp\De
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDataAccessObject", "IDataAccessObject\IDataAccessObject.csproj", "{687064A4-AD26-468E-AD61-3F84C04ABC50}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Java Client", "Java Client", "{2A96E10C-2F7A-4107-9929-26E71CC44039}"
+	ProjectSection(SolutionItems) = preProject
+		Java Client\SapiaClient.java = Java Client\SapiaClient.java
+		Java Client\SapiaClientTests.java = Java Client\SapiaClientTests.java
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

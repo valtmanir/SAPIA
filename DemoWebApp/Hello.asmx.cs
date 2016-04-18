@@ -22,5 +22,11 @@ namespace DemoWebApp
         {
             return HttpContext.Current.User.Identity.Name;
         }
+    
+        [WebMethod()]
+        public string HelloWorldPost(string postData)
+        {
+            return HttpContext.Current.User.Identity.Name;
+        }
     }
 }
