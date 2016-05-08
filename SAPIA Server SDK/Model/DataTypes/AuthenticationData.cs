@@ -58,19 +58,14 @@ namespace SAPIA_NET_Server_SDK.Model
 
         private void SetMaximumPayload(HttpContext context) {
             Payload = "";
-            if (context.Request.InputStream.Length > 0)
-                using (var bufferedStream = new BufferedStream(context.Request.InputStream, maxPayloadBytes))
-                    using (var streamReader = new StreamReader(bufferedStream))
-                    {
-                        if (context.Request.InputStream.Length <= maxPayloadBytes)
-                            Payload = streamReader.ReadToEnd();
-                        else
-                        {
-                            var payloadBuffer = new char[maxPayloadBytes];
-                            streamReader.Read(payloadBuffer, 0, maxPayloadBytes);
-                            Payload = new string(payloadBuffer);
-                        }
-                    }
+            var inputStream = context.Request.InputStream;
+            if (inputStream.Length > 0)
+            {
+                var bytesToRead = (int) (inputStream.Length <= maxPayloadBytes ? inputStream.Length : maxPayloadBytes); 
+                var payloadBuffer = new byte[bytesToRead];
+                inputStream.Read(payloadBuffer, 0, bytesToRead);
+                Payload = Encoding.ASCII.GetString(payloadBuffer);
+            }
         }
 
         private string GetDecodedAuthorizationHeaderValue(HttpContext context)
